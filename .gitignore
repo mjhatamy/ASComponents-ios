@@ -1,0 +1,7 @@
+docs/_site/
+xcuserdata
+
+
+# Carthage
+Cartfile.resolved
+Carthage/
