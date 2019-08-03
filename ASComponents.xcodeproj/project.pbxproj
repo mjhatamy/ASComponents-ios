@@ -20,9 +20,11 @@
 		C32C0370226569780084F28E /* ASDisplayNode2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C036F226569780084F28E /* ASDisplayNode2.swift */; };
 		C32C0372226569AD0084F28E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C0371226569AD0084F28E /* Globals.swift */; };
 		C32C037422656BF50084F28E /* ASCellNode2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C037322656BF50084F28E /* ASCellNode2.swift */; };
+		C3406D1822F5204E00A4F2F2 /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3406D1722F5204E00A4F2F2 /* AsyncDisplayKit.framework */; };
+		C3406D1A22F5205500A4F2F2 /* GXUIKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3406D1922F5205500A4F2F2 /* GXUIKitExtensions.framework */; };
+		C3847C0E22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3847C0D22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift */; };
 		C3A9646F22E6B6C6008003FB /* search_anim_black.json in Resources */ = {isa = PBXBuildFile; fileRef = C3A9646E22E6B6C6008003FB /* search_anim_black.json */; };
 		C3A9647C22E6C962008003FB /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A9647B22E6C962008003FB /* Lottie.framework */; };
-		C3A9647E22E6C969008003FB /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A9647D22E6C968008003FB /* AsyncDisplayKit.framework */; };
 		C3A964DA22E73D0D008003FB /* ASGxEditableTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A964D922E73D0D008003FB /* ASGxEditableTextNode.swift */; };
 		C3AB3DB9227ED240003BFDBB /* ASBarButtonItemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB3DB8227ED240003BFDBB /* ASBarButtonItemNode.swift */; };
 		C3EA41C02265853D000D62D7 /* ASActivityIndicatorViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA41BF2265853D000D62D7 /* ASActivityIndicatorViewNode.swift */; };
@@ -59,9 +61,12 @@
 		C32C036F226569780084F28E /* ASDisplayNode2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASDisplayNode2.swift; sourceTree = "<group>"; };
 		C32C0371226569AD0084F28E /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		C32C037322656BF50084F28E /* ASCellNode2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCellNode2.swift; sourceTree = "<group>"; };
+		C3406D1722F5204E00A4F2F2 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AsyncDisplayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3406D1922F5205500A4F2F2 /* GXUIKitExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GXUIKitExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35F934622E5B04600A1A170 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = "../../../MyGix-Project/carthage_sharedlibs/Carthage/Build/iOS/AsyncDisplayKit.framework"; sourceTree = "<group>"; };
 		C35F935D22E6795100A1A170 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = "../../../MyGix-Project/carthage_sharedlibs/Carthage/Build/iOS/Lottie.framework"; sourceTree = "<group>"; };
 		C35F937222E6892700A1A170 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3847C0D22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitKeypadBackDeleteButtonViewNode.swift; sourceTree = "<group>"; };
 		C3A9646822E6B58C008003FB /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = "../../../MyGix-Project.old/carthage_sharedlibs/Carthage/Build/iOS/AsyncDisplayKit.framework"; sourceTree = "<group>"; };
 		C3A9646A22E6B59D008003FB /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = "../../../MyGix-ios/carthage/Carthage/Build/iOS/Lottie.framework"; sourceTree = "<group>"; };
 		C3A9646C22E6B5A0008003FB /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = "../../../MyGix-ios/carthage/Carthage/Build/iOS/AsyncDisplayKit.framework"; sourceTree = "<group>"; };
@@ -83,7 +88,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A9647C22E6C962008003FB /* Lottie.framework in Frameworks */,
-				C3A9647E22E6C969008003FB /* AsyncDisplayKit.framework in Frameworks */,
+				C3406D1A22F5205500A4F2F2 /* GXUIKitExtensions.framework in Frameworks */,
+				C3406D1822F5204E00A4F2F2 /* AsyncDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,10 +176,20 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		C3847C0C22F3CFC800FC5375 /* CallKit */ = {
+			isa = PBXGroup;
+			children = (
+				C3847C0D22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift */,
+			);
+			path = CallKit;
+			sourceTree = "<group>";
+		};
 		C3BEC1E2228E763900CAC673 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C3A9647D22E6C968008003FB /* AsyncDisplayKit.framework */,
+				C3406D1722F5204E00A4F2F2 /* AsyncDisplayKit.framework */,
+				C3406D1922F5205500A4F2F2 /* GXUIKitExtensions.framework */,
 				C3A9647B22E6C962008003FB /* Lottie.framework */,
 				C3A9646C22E6B5A0008003FB /* AsyncDisplayKit.framework */,
 				C3A9646A22E6B59D008003FB /* Lottie.framework */,
@@ -188,6 +204,7 @@
 		C3EA41E022682813000D62D7 /* Complex */ = {
 			isa = PBXGroup;
 			children = (
+				C3847C0C22F3CFC800FC5375 /* CallKit */,
 				C3EA41E32268288B000D62D7 /* LottieAssets */,
 				C3EA41E12268282C000D62D7 /* ASTransferButtonNode.swift */,
 				C3EA41E4226828A8000D62D7 /* Assets.xcassets */,
@@ -335,6 +352,7 @@
 				C328BB78227D765600C33BBF /* CallKitKeypadDigitButtonViewNode.swift in Sources */,
 				C3AB3DB9227ED240003BFDBB /* ASBarButtonItemNode.swift in Sources */,
 				C328BB54227D3A9C00C33BBF /* CallKitRecordButtonViewNode.swift in Sources */,
+				C3847C0E22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift in Sources */,
 				C32C036C226566B30084F28E /* ASSwitchNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

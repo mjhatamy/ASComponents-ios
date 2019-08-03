@@ -18,7 +18,7 @@ public class CallKitKeypadDigitButtonViewNode:ASDisplayNode {
     let image:UIImage?
     let normalBackgroundColor:UIColor
     let highlightBackgroundColor:UIColor
-    var digitCode:Int
+    public var digitCode:Int
     
     
     public init(digit:Int, iconImage:UIImage? = nil, largeAttributedText:NSAttributedString? = nil, smallAttributedText:NSAttributedString? = nil, backgroundColor:UIColor, highlightBackgroundColor:UIColor) {

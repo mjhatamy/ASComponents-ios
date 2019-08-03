@@ -43,6 +43,8 @@ open class CallKitRecordButtonViewNode:ASDisplayNode {
         super.init()
         self.automaticallyManagesSubnodes = true
         self.labelNode.attributedText = titleAttributedString
+        
+        self.recordAnimationSelectedLottieViewNode.loopMode = .loop
     }
     
     
