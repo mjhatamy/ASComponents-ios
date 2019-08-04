@@ -9,42 +9,54 @@
 import UIKit
 import GXUIKitExtensions
 import AsyncDisplayKit
+import SwiftSVGKit
 
 public class CallKitKeypadBackDeleteButtonViewNode: ASDisplayNode {
-    let iconImageNode:ASImageNode = ASImageNode()
-    let textNode:ASTextNode2 = ASTextNode2();
-    let imageColor:UIColor
-    let contentInset:UIEdgeInsets
+    public let buttonNode:ASButtonNode = ASButtonNode();
+    let button_backgroundColor:UIColor
+    let contentColor:UIColor
     
-    public init( image: UIImage?,  textFont:UIFont, textColor:UIColor, imageColor: UIColor,  imageSize: CGSize, contentInset:UIEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)) {
-        self.imageColor = imageColor;
-        self.contentInset = contentInset;
+    public init( backgroundColor:UIColor, contentColor:UIColor, highlightBackgroundColor:UIColor ) {
+        self.button_backgroundColor = backgroundColor;
+        self.contentColor = contentColor;
         super.init()
         self.automaticallyManagesSubnodes = true;
-        self.iconImageNode.image = image;
+        //self.iconImageNode.image = image;
+        let svgAsset = NSDataAsset(name: "callkit_backdelete_dialpad_icon", bundle: Bundle(for: CallKitKeypadBackDeleteButtonViewNode.self))
+        if svgAsset != nil {
+            //svgAsset.data
+            if let doc = SVGDocument(data: svgAsset?.data ?? Data()) {
+                
+                
+                
+                SWKQueue.mainQueue().async { [weak self] in
+                    guard let strongSelf = self else { return }
+                    
+                    doc.setStyle(Style(strokeColor: nil, fillColor: backgroundColor), for: "box")
+                    doc.setStyle(Style(strokeColor: nil, fillColor: contentColor), for: "cross")
+                    strongSelf.buttonNode.setImage(doc.image(CGSize(width: 40, height: 40)), for: UIControl.State.normal)
+                    
+                    doc.setStyle(Style(strokeColor: nil, fillColor: highlightBackgroundColor), for: "box")
+                    doc.setStyle(Style(strokeColor: nil, fillColor: contentColor), for: "cross")
+                    strongSelf.buttonNode.setImage(doc.image(CGSize(width: 40, height: 40)), for: UIControl.State.highlighted)
+                }
+            }else{
+                LOGE("Unable to load SVGDocument")
+            }
+        }else{
+            LOGE("Unable to load ASSET callkit_backdelete_dialpad_icon")
+        }
         
-        self.textNode.attributedText = "X".attributedString(textColor, font: textFont, alignment: .center, backgroundColor: nil);
-        
-        self.iconImageNode.style.alignSelf = .center
+        self.buttonNode.contentMode = .scaleAspectFit
+        self.buttonNode.imageNode.contentMode = .scaleAspectFit
+        self.buttonNode.style.alignSelf = .center
     }
     
     public override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let layout = ASAbsoluteLayoutSpec();
-        
-        var imageSizeRaw = CGSize(width: constrainedSize.max.width, height: ((constrainedSize.max.width * 75)/102))
-        imageSizeRaw.width -= self.contentInset.left + self.contentInset.right
-        imageSizeRaw.height -= self.contentInset.top + self.contentInset.bottom
-        
-        LOGD("constrainedSize::> \(constrainedSize.max)  width:\(imageSizeRaw.width)  height:\(imageSizeRaw.height)")
-        
-        let xPointCenter = (constrainedSize.max.width - (imageSizeRaw.width))/2
-        let yPointCenter = (constrainedSize.max.height - (imageSizeRaw.height))/2
-        
-        self.iconImageNode.style.layoutPosition = CGPoint(x: xPointCenter, y: yPointCenter)
-        self.textNode.style.layoutPosition = CGPoint(x: xPointCenter + 14, y: yPointCenter + 6)
-        self.iconImageNode.style.preferredLayoutSize = ASLayoutSizeMake(ASDimensionMake(imageSizeRaw.width), ASDimensionMake(imageSizeRaw.height))
-        
-        layout.children = [ self.iconImageNode, self.textNode ]
+        LOGE("size: \(constrainedSize.max)")
+        self.buttonNode.style.preferredLayoutSize = ASLayoutSizeMake(ASDimensionMake(constrainedSize.max.width), ASDimensionMake(constrainedSize.max.height))
+        layout.children = [ self.buttonNode]
         return layout;
     }
 }

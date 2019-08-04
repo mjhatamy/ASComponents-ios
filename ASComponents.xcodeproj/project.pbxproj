@@ -22,6 +22,8 @@
 		C32C037422656BF50084F28E /* ASCellNode2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C037322656BF50084F28E /* ASCellNode2.swift */; };
 		C3406D1822F5204E00A4F2F2 /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3406D1722F5204E00A4F2F2 /* AsyncDisplayKit.framework */; };
 		C3406D1A22F5205500A4F2F2 /* GXUIKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3406D1922F5205500A4F2F2 /* GXUIKitExtensions.framework */; };
+		C344319E22F667F700E73089 /* SwiftSVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C344319D22F667F700E73089 /* SwiftSVGKit.framework */; };
+		C34431A022F669F500E73089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C344319F22F669F500E73089 /* Assets.xcassets */; };
 		C3847C0E22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3847C0D22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift */; };
 		C3A9646F22E6B6C6008003FB /* search_anim_black.json in Resources */ = {isa = PBXBuildFile; fileRef = C3A9646E22E6B6C6008003FB /* search_anim_black.json */; };
 		C3A9647C22E6C962008003FB /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A9647B22E6C962008003FB /* Lottie.framework */; };
@@ -63,6 +65,8 @@
 		C32C037322656BF50084F28E /* ASCellNode2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCellNode2.swift; sourceTree = "<group>"; };
 		C3406D1722F5204E00A4F2F2 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AsyncDisplayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3406D1922F5205500A4F2F2 /* GXUIKitExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GXUIKitExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C344319D22F667F700E73089 /* SwiftSVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C344319F22F669F500E73089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C35F934622E5B04600A1A170 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = "../../../MyGix-Project/carthage_sharedlibs/Carthage/Build/iOS/AsyncDisplayKit.framework"; sourceTree = "<group>"; };
 		C35F935D22E6795100A1A170 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = "../../../MyGix-Project/carthage_sharedlibs/Carthage/Build/iOS/Lottie.framework"; sourceTree = "<group>"; };
 		C35F937222E6892700A1A170 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,7 @@
 			files = (
 				C3A9647C22E6C962008003FB /* Lottie.framework in Frameworks */,
 				C3406D1A22F5205500A4F2F2 /* GXUIKitExtensions.framework in Frameworks */,
+				C344319E22F667F700E73089 /* SwiftSVGKit.framework in Frameworks */,
 				C3406D1822F5204E00A4F2F2 /* AsyncDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				C3847C0D22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift */,
+				C344319F22F669F500E73089 /* Assets.xcassets */,
 			);
 			path = CallKit;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 				C3A9647D22E6C968008003FB /* AsyncDisplayKit.framework */,
 				C3406D1722F5204E00A4F2F2 /* AsyncDisplayKit.framework */,
 				C3406D1922F5205500A4F2F2 /* GXUIKitExtensions.framework */,
+				C344319D22F667F700E73089 /* SwiftSVGKit.framework */,
 				C3A9647B22E6C962008003FB /* Lottie.framework */,
 				C3A9646C22E6B5A0008003FB /* AsyncDisplayKit.framework */,
 				C3A9646A22E6B59D008003FB /* Lottie.framework */,
@@ -322,6 +329,7 @@
 				C3EA41E822682A21000D62D7 /* transfer_button_prepairing_day.json in Resources */,
 				C3EA41E922682A21000D62D7 /* transfer_button_transfering_day.json in Resources */,
 				C3EA41E5226828A8000D62D7 /* Assets.xcassets in Resources */,
+				C34431A022F669F500E73089 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -74,7 +74,6 @@ public final class CallKitActionKeyButtonViewNode:ASDisplayNode {
     }
     
     
-    public var onTouchInInside:((_ sender:CallKitActionKeyButtonViewNode) -> ())?
     public var onTouchUpInside:((_ sender:CallKitActionKeyButtonViewNode) -> ())?
     
     let iconContainerNode:CallKitButtonIconContainerNode
@@ -210,11 +209,6 @@ public final class CallKitActionKeyButtonViewNode:ASDisplayNode {
         super.touchesBegan(touches, with: event)
         if !self.isEnabled { return }
         m_isHighlighted = true
-        
-        if self.isInsideSelf(touches: touches, event: event) {
-            self.onTouchInInside?(self)
-        }
-        
     }
     
     public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

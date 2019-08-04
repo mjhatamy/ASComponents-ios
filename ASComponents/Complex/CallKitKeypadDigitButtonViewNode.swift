@@ -9,9 +9,8 @@
 import UIKit
 import AsyncDisplayKit
 
-public class CallKitKeypadDigitButtonViewNode:ASDisplayNode {
-    public var onTouchInInside:((_ sender:CallKitKeypadDigitButtonViewNode) -> ())?
-    public var onTouchUpInside:((_ sender:CallKitKeypadDigitButtonViewNode) -> ())?
+public class CallKitKeypadDigitButtonViewNode:ASButtonNode {
+    @objc public var onTouchUpInside:((_ sender:CallKitKeypadDigitButtonViewNode) -> ())?
     let largeTextNode:ASTextNode2 = ASTextNode2()
     let smallTextNode:ASTextNode2 = ASTextNode2()
     let iconImageNode:ASImageNode = ASImageNode()
@@ -39,6 +38,11 @@ public class CallKitKeypadDigitButtonViewNode:ASDisplayNode {
         self.iconImageNode.image = self.image
         self.iconImageNode.contentMode = .scaleAspectFit
         self.iconImageNode.forceUpscaling = true
+        
+        self.addTarget(self, action: #selector(onTouchUpInsidePrivate), forControlEvents: ASControlNodeEvent.touchUpInside)
+    }
+    @objc private func onTouchUpInsidePrivate( _ sender:CallKitKeypadDigitButtonViewNode){
+        self.onTouchUpInside?(self);
     }
     
     public override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -53,14 +57,12 @@ public class CallKitKeypadDigitButtonViewNode:ASDisplayNode {
         }else{
             layout.children = [self.largeTextNode, self.smallTextNode]
         }
-        
-        
         self.cornerRadius = constrainedSize.max.width/2
-        
         return layout
     }
     
-    public var isEnabled:Bool = true {
+    
+    public override var isEnabled:Bool{
         didSet{
             self.alpha = self.isEnabled ? 1 : 0.6
             if !self.isEnabled {
@@ -69,21 +71,38 @@ public class CallKitKeypadDigitButtonViewNode:ASDisplayNode {
         }
     }
     
-    private var m_isHighlighted:Bool = false {
+    public override var isHighlighted: Bool {
         didSet{
-            SWKQueue.mainQueue().async { [weak self] in
-                UIView.animate(withDuration: 0.3, animations: { [weak self] in
-                    if self?.m_isHighlighted ?? false {
-                        self?.backgroundColor = self?.highlightBackgroundColor
-                    }else{
-                        self?.backgroundColor = self?.normalBackgroundColor;
-                    }
-                })
+            if oldValue != isHighlighted {
+                m_isHighlighted = isHighlighted
             }
         }
     }
     
+    private var m_isHighlighted:Bool = false {
+        didSet{
+            SWKQueue.mainQueue().async { [weak self] in
+                guard let strongSelf = self else { return }
+                let originalColor: UIColor? =  strongSelf.backgroundColor
+                var newColor:UIColor? = strongSelf.normalBackgroundColor;
+                if strongSelf.m_isHighlighted {
+                    newColor = strongSelf.highlightBackgroundColor
+                }
+                /// CABasicAnimation prevents lag of UIView.animation
+                strongSelf.backgroundColor = newColor
+                let colorAnimation = CABasicAnimation(keyPath: "backgroundColor")
+                colorAnimation.fromValue = originalColor?.cgColor
+                colorAnimation.duration = 0.3
+                colorAnimation.autoreverses = false
+                colorAnimation.repeatCount = 0
+                colorAnimation.isRemovedOnCompletion = true
+                self?.view.layer.add(colorAnimation, forKey: "ColorPulse")
+ 
+            }
+        }
+    }
     
+    /*
     private func isInsideSelf(touches:Set<UITouch>, event:UIEvent?) -> Bool{
         if let touch = touches.first {
             let location = touch.location(in: self.view)
@@ -129,5 +148,6 @@ public class CallKitKeypadDigitButtonViewNode:ASDisplayNode {
         if !self.isEnabled { return }
         m_isHighlighted = false
     }
+    */
     
 }
