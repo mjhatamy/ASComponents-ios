@@ -24,6 +24,7 @@
 		C3406D1A22F5205500A4F2F2 /* GXUIKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3406D1922F5205500A4F2F2 /* GXUIKitExtensions.framework */; };
 		C344319E22F667F700E73089 /* SwiftSVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C344319D22F667F700E73089 /* SwiftSVGKit.framework */; };
 		C34431A022F669F500E73089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C344319F22F669F500E73089 /* Assets.xcassets */; };
+		C34431B122F7851700E73089 /* ASWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34431B022F7851700E73089 /* ASWKWebView.swift */; };
 		C3847C0E22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3847C0D22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift */; };
 		C3A9646F22E6B6C6008003FB /* search_anim_black.json in Resources */ = {isa = PBXBuildFile; fileRef = C3A9646E22E6B6C6008003FB /* search_anim_black.json */; };
 		C3A9647C22E6C962008003FB /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A9647B22E6C962008003FB /* Lottie.framework */; };
@@ -67,6 +68,7 @@
 		C3406D1922F5205500A4F2F2 /* GXUIKitExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GXUIKitExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C344319D22F667F700E73089 /* SwiftSVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C344319F22F669F500E73089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C34431B022F7851700E73089 /* ASWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASWKWebView.swift; sourceTree = "<group>"; };
 		C35F934622E5B04600A1A170 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = "../../../MyGix-Project/carthage_sharedlibs/Carthage/Build/iOS/AsyncDisplayKit.framework"; sourceTree = "<group>"; };
 		C35F935D22E6795100A1A170 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = "../../../MyGix-Project/carthage_sharedlibs/Carthage/Build/iOS/Lottie.framework"; sourceTree = "<group>"; };
 		C35F937222E6892700A1A170 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 				C32C03602265641E0084F28E /* ASProgressViewNode.swift */,
 				C3EA41BF2265853D000D62D7 /* ASActivityIndicatorViewNode.swift */,
 				C3AB3DB8227ED240003BFDBB /* ASBarButtonItemNode.swift */,
+				C34431B022F7851700E73089 /* ASWKWebView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				C32C036E226566E60084F28E /* ASLottieAnimationViewNode.swift in Sources */,
 				C32C0370226569780084F28E /* ASDisplayNode2.swift in Sources */,
 				C328BB78227D765600C33BBF /* CallKitKeypadDigitButtonViewNode.swift in Sources */,
+				C34431B122F7851700E73089 /* ASWKWebView.swift in Sources */,
 				C3AB3DB9227ED240003BFDBB /* ASBarButtonItemNode.swift in Sources */,
 				C328BB54227D3A9C00C33BBF /* CallKitRecordButtonViewNode.swift in Sources */,
 				C3847C0E22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift in Sources */,
