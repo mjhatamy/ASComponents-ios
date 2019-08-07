@@ -30,6 +30,7 @@
 		C3A9647C22E6C962008003FB /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A9647B22E6C962008003FB /* Lottie.framework */; };
 		C3A964DA22E73D0D008003FB /* ASGxEditableTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A964D922E73D0D008003FB /* ASGxEditableTextNode.swift */; };
 		C3AB3DB9227ED240003BFDBB /* ASBarButtonItemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB3DB8227ED240003BFDBB /* ASBarButtonItemNode.swift */; };
+		C3C029C622F9072200BD16AE /* ASUITextFieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C029C522F9072200BD16AE /* ASUITextFieldNode.swift */; };
 		C3EA41C02265853D000D62D7 /* ASActivityIndicatorViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA41BF2265853D000D62D7 /* ASActivityIndicatorViewNode.swift */; };
 		C3EA41E22268282C000D62D7 /* ASTransferButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA41E12268282C000D62D7 /* ASTransferButtonNode.swift */; };
 		C3EA41E5226828A8000D62D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3EA41E4226828A8000D62D7 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		C3A9647D22E6C968008003FB /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = "../../../MyGix-ios/carthage_frameworks/Carthage/Build/iOS/AsyncDisplayKit.framework"; sourceTree = "<group>"; };
 		C3A964D922E73D0D008003FB /* ASGxEditableTextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASGxEditableTextNode.swift; sourceTree = "<group>"; };
 		C3AB3DB8227ED240003BFDBB /* ASBarButtonItemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASBarButtonItemNode.swift; sourceTree = "<group>"; };
+		C3C029C522F9072200BD16AE /* ASUITextFieldNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASUITextFieldNode.swift; sourceTree = "<group>"; };
 		C3EA41BF2265853D000D62D7 /* ASActivityIndicatorViewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASActivityIndicatorViewNode.swift; sourceTree = "<group>"; };
 		C3EA41E12268282C000D62D7 /* ASTransferButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTransferButtonNode.swift; sourceTree = "<group>"; };
 		C3EA41E4226828A8000D62D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				C3EA41BF2265853D000D62D7 /* ASActivityIndicatorViewNode.swift */,
 				C3AB3DB8227ED240003BFDBB /* ASBarButtonItemNode.swift */,
 				C34431B022F7851700E73089 /* ASWKWebView.swift */,
+				C3C029C522F9072200BD16AE /* ASUITextFieldNode.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				C32C0370226569780084F28E /* ASDisplayNode2.swift in Sources */,
 				C328BB78227D765600C33BBF /* CallKitKeypadDigitButtonViewNode.swift in Sources */,
 				C34431B122F7851700E73089 /* ASWKWebView.swift in Sources */,
+				C3C029C622F9072200BD16AE /* ASUITextFieldNode.swift in Sources */,
 				C3AB3DB9227ED240003BFDBB /* ASBarButtonItemNode.swift in Sources */,
 				C328BB54227D3A9C00C33BBF /* CallKitRecordButtonViewNode.swift in Sources */,
 				C3847C0E22F3D03200FC5375 /* CallKitKeypadBackDeleteButtonViewNode.swift in Sources */,

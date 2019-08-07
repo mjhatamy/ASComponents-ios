@@ -28,11 +28,11 @@ public final class ASLottieAnimationViewNode: ASDisplayNode {
             guard let strongSelf = self else { return }
             strongSelf.lottieAnimationView.loopMode = .autoReverse
             strongSelf.lottieAnimationView.backgroundBehavior = .pauseAndRestore
-            strongSelf.lottieAnimationView.contentMode = .scaleAspectFill
+            strongSelf.lottieAnimationView.contentMode = .scaleAspectFit
             strongSelf.lottieAnimationView.translatesAutoresizingMaskIntoConstraints = false
         }
     }
- 
+    
     public override func didEnterVisibleState() {
         super.didEnterVisibleState()
         SWKQueue.mainQueue().async { [weak self] in
