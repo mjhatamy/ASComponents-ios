@@ -29,6 +29,7 @@ public class ASGxEditableTextNode: ASDisplayNode, ASEditableTextNodeDelegate {
     public override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let layout = ASStackLayoutSpec.vertical()
         //layout.style.flexGrow = 1;
+        layout.style.minHeight = self.style.minHeight
         layout.justifyContent = .center
         layout.children = [ASInsetLayoutSpec(insets: self.textViewInset, child: self.textNode)]
         return layout
