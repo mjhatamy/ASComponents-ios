@@ -9,16 +9,16 @@
 import UIKit
 import AsyncDisplayKit
 
-public final class ASActivityIndicatorViewNode: ASDisplayNode2 {
+public final class ASActivityIndicatorViewNode: ASDisplayNode {
     
     var activityIndicatorView:UIActivityIndicatorView { return view as! UIActivityIndicatorView }
     
     public override init() {
         super.init()
         setViewBlock { () -> UIView in
-            return UIActivityIndicatorView()
+            return UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
         }
-        self.activityIndicatorView.startAnimating()
+        //self.startAnimating()
     }
     
     public func startAnimating(){
