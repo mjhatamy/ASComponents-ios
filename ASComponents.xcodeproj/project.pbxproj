@@ -30,6 +30,7 @@
 		C3A964DA22E73D0D008003FB /* ASGxEditableTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A964D922E73D0D008003FB /* ASGxEditableTextNode.swift */; };
 		C3AB3DB9227ED240003BFDBB /* ASBarButtonItemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB3DB8227ED240003BFDBB /* ASBarButtonItemNode.swift */; };
 		C3C029C622F9072200BD16AE /* ASUITextFieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C029C522F9072200BD16AE /* ASUITextFieldNode.swift */; };
+		C3CB3C232329D8D300BF9EBD /* GxTitleDetailImageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB3C222329D8D300BF9EBD /* GxTitleDetailImageCellNode.swift */; };
 		C3EA41C02265853D000D62D7 /* ASActivityIndicatorViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA41BF2265853D000D62D7 /* ASActivityIndicatorViewNode.swift */; };
 		C3EA41E22268282C000D62D7 /* ASTransferButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA41E12268282C000D62D7 /* ASTransferButtonNode.swift */; };
 		C3EA41E5226828A8000D62D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3EA41E4226828A8000D62D7 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		C3A964D922E73D0D008003FB /* ASGxEditableTextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASGxEditableTextNode.swift; sourceTree = "<group>"; };
 		C3AB3DB8227ED240003BFDBB /* ASBarButtonItemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASBarButtonItemNode.swift; sourceTree = "<group>"; };
 		C3C029C522F9072200BD16AE /* ASUITextFieldNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASUITextFieldNode.swift; sourceTree = "<group>"; };
+		C3CB3C222329D8D300BF9EBD /* GxTitleDetailImageCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GxTitleDetailImageCellNode.swift; sourceTree = "<group>"; };
 		C3EA41BF2265853D000D62D7 /* ASActivityIndicatorViewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASActivityIndicatorViewNode.swift; sourceTree = "<group>"; };
 		C3EA41E12268282C000D62D7 /* ASTransferButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTransferButtonNode.swift; sourceTree = "<group>"; };
 		C3EA41E4226828A8000D62D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		C32C0346226563D40084F28E /* ASComponents */ = {
 			isa = PBXGroup;
 			children = (
+				C3CB3C212329D8AE00BF9EBD /* TableOrCollectionCells */,
 				C3A9646E22E6B6C6008003FB /* search_anim_black.json */,
 				C3EA41E022682813000D62D7 /* Complex */,
 				C32C03682265664D0084F28E /* Helper */,
@@ -214,6 +217,14 @@
 				C35F934622E5B04600A1A170 /* AsyncDisplayKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3CB3C212329D8AE00BF9EBD /* TableOrCollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				C3CB3C222329D8D300BF9EBD /* GxTitleDetailImageCellNode.swift */,
+			);
+			path = TableOrCollectionCells;
 			sourceTree = "<group>";
 		};
 		C3EA41E022682813000D62D7 /* Complex */ = {
@@ -363,6 +374,7 @@
 				C32C036A2265666F0084F28E /* SWKQueue.swift in Sources */,
 				C32C037422656BF50084F28E /* ASCellNode2.swift in Sources */,
 				C32C0372226569AD0084F28E /* Globals.swift in Sources */,
+				C3CB3C232329D8D300BF9EBD /* GxTitleDetailImageCellNode.swift in Sources */,
 				C32C036E226566E60084F28E /* ASLottieAnimationViewNode.swift in Sources */,
 				C32C0370226569780084F28E /* ASDisplayNode2.swift in Sources */,
 				C328BB78227D765600C33BBF /* CallKitKeypadDigitButtonViewNode.swift in Sources */,
