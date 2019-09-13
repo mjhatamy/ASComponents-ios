@@ -10,6 +10,12 @@ import UIKit
 import AsyncDisplayKit
 
 public class ItemPlaceHolderCellNode:ASCellNode {
+    public enum ViewType {
+        case ImageTop
+        case ImageLeft
+        case ImageRight
+    }
+    
     public var lottieAnimNode: ASLottieAnimationViewNode?
     public var imageNode:ASImageNode = ASImageNode();
     public var titletNode:ASTextNode = ASTextNode()
@@ -17,11 +23,13 @@ public class ItemPlaceHolderCellNode:ASCellNode {
     let preferredLayoutSize:ASLayoutSize;
     let imageLayoutSize:ASLayoutSize?
     let lottieAnimLayoutSize:ASLayoutSize?
+    let viewType:ViewType;
     public init(backgroundColor:UIColor?, highlightedBackgroundColor:UIColor?, preferredLayoutSize:ASLayoutSize = ASLayoutSizeMake(ASDimensionMake("100%"), ASDimensionMake(44)),
-                imageLayoutSize:ASLayoutSize?, lottieAnimLayoutSize:ASLayoutSize?) {
+                imageLayoutSize:ASLayoutSize? = nil, lottieAnimLayoutSize:ASLayoutSize? = nil, viewType:ViewType = ViewType.ImageTop) {
         self.preferredLayoutSize = preferredLayoutSize;
         self.imageLayoutSize = imageLayoutSize;
         self.lottieAnimLayoutSize = lottieAnimLayoutSize;
+        self.viewType = viewType;
         super.init()
         self.selectionStyle = .none
         self.automaticallyManagesSubnodes = true;
