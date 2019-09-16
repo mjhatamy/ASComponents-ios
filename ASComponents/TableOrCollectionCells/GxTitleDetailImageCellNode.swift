@@ -78,7 +78,8 @@ public class GxTitleDetailImageCellNode: ASCellNode {
             break;
         case .Subtitle:
             detailsTextLayout.direction = .vertical;
-            detailsTextLayout.justifyContent = .start
+            self.textNode.style.alignSelf = .start
+            detailsTextLayout.justifyContent = .center
             break;
         }
         detailsTextLayout.children = [self.textNode, self.detailTextNode]
