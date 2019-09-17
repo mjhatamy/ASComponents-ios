@@ -51,10 +51,12 @@ public class GxTitleDetailImageCellNode: ASCellNode {
     
     override public func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let horizantalLaout = ASStackLayoutSpec.horizontal()
-        horizantalLaout.style.flexGrow = 1
+        //horizantalLaout.style.flexGrow = 1
         horizantalLaout.justifyContent = .start
         horizantalLaout.alignContent = .center
-        horizantalLaout.style.preferredLayoutSize = self.preferredLayoutSize;
+        //horizantalLaout.style.preferredLayoutSize = self.preferredLayoutSize;
+        horizantalLaout.style.minHeight = self.preferredLayoutSize.height
+        horizantalLaout.style.width = self.preferredLayoutSize.width;
         
         self.textNode.style.alignSelf = .center;
         self.textNode.style.spacingBefore = 0;
@@ -65,9 +67,11 @@ public class GxTitleDetailImageCellNode: ASCellNode {
         
         let detailsTextLayout = ASStackLayoutSpec.horizontal()
         detailsTextLayout.style.alignSelf = .center;
-        detailsTextLayout.style.flexGrow = 1
+        detailsTextLayout.style.flexGrow = 1;
+        detailsTextLayout.style.flexShrink = 1;
         detailsTextLayout.alignContent = .center
-        detailsTextLayout.style.spacingBefore = 15
+        detailsTextLayout.style.spacingBefore = 16
+        
         
         switch self.viewType {
         case .LeftDetail:
@@ -78,18 +82,31 @@ public class GxTitleDetailImageCellNode: ASCellNode {
             break;
         case .Subtitle:
             detailsTextLayout.direction = .vertical;
+            detailsTextLayout.alignContent = .start
             self.textNode.style.alignSelf = .start
+            self.detailTextNode.style.alignSelf = .start
             detailsTextLayout.justifyContent = .center
+            detailsTextLayout.style.spacingAfter = 8
             break;
         }
-        detailsTextLayout.children = [self.textNode, self.detailTextNode]
+        
+        var textElements = [ASLayoutElement]()
+        if self.textNode.attributedText?.string.count ?? 0 > 0 {
+            textElements.append(self.textNode)
+        }
+        if self.detailTextNode.attributedText?.string.count ?? 0 > 0 {
+            textElements.append(self.detailTextNode)
+        }
+        detailsTextLayout.children = textElements//[self.textNode, self.detailTextNode]
+        
         
         var children = [ASLayoutElement]()
         if let _ = self.imageNode.image {
             children.append(self.imageNode)
         }
-        //children.append(self.textNode)
         children.append(detailsTextLayout)
+        
+        //detailsTextLayout.style.preferredLayoutSize = ASLayoutSizeMake(ASDimensionMake(.auto, 0), ASDimensionMake(.auto,0))
         
         horizantalLaout.children = children
         return horizantalLaout
