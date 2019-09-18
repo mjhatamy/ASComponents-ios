@@ -10,7 +10,7 @@ import UIKit
 import AsyncDisplayKit
 
 public class CallKitKeypadDigitButtonViewNode:ASButtonNode {
-    @objc public var onTouchUpInside:((_ sender:CallKitKeypadDigitButtonViewNode) -> ())?
+    //@objc public var onTouchUpInside:((_ sender:CallKitKeypadDigitButtonViewNode) -> ())?
     let largeTextNode:ASTextNode2 = ASTextNode2()
     let smallTextNode:ASTextNode2 = ASTextNode2()
     let iconImageNode:ASImageNode = ASImageNode()
@@ -39,11 +39,11 @@ public class CallKitKeypadDigitButtonViewNode:ASButtonNode {
         self.iconImageNode.contentMode = .scaleAspectFit
         self.iconImageNode.forceUpscaling = true
         
-        self.addTarget(self, action: #selector(onTouchUpInsidePrivate), forControlEvents: ASControlNodeEvent.touchUpInside)
+        //self.addTarget(self, action: #selector(onTouchUpInsidePrivate), forControlEvents: ASControlNodeEvent.touchUpInside)
     }
-    @objc private func onTouchUpInsidePrivate( _ sender:CallKitKeypadDigitButtonViewNode){
-        self.onTouchUpInside?(self);
-    }
+    //@objc private func onTouchUpInsidePrivate( _ sender:CallKitKeypadDigitButtonViewNode){
+    //    self.onTouchUpInside?(self);
+    //}
     
     public override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let layout = ASStackLayoutSpec.vertical()
